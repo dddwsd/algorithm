@@ -1,2 +1,1 @@
-# algorithm
-Problem about algorithms
+Problem about algorithms.
