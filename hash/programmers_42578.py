@@ -1,20 +1,15 @@
 # https://programmers.co.kr/learn/courses/30/lessons/42578
 
 from collections import defaultdict
-from itertools import combinations
 def solution(clothes):
-    answer = 0
+    answer = 1
     dic = defaultdict(int)
     for _, type in clothes:
         dic[type] += 1
     
-    keys = list(dic.values())
-    for length in range(len(dic)):
-        length += 1
-        for item in list(combinations(keys,length)):
-
-
-    return answer
+    for val in list(dic.values()):
+        answer *= (val+1)
+    return answer-1
 
 clothes = [["yellowhat", "headgear"], ["bluesunglasses", "eyewear"], ["green_turban", "headgear"]]
 result = 5
