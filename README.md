@@ -1,17 +1,12 @@
 # Algorithm
+Problems about algorithm & data structure.
 
-BFS & DFS - https://velog.io/@dddwsd/BFS-DFS
+Description about algorithm & data structure
+- https://velog.io/@dddwsd?tag=algorithm
+- https://velog.io/@dddwsd?tag=data-structure
 
-Exhaustive Search - https://velog.io/@dddwsd/Exhaustive-search
+## Programmers
+Problem in [`programmers`](https://programmers.co.kr/learn/challenges)
 
-Greedy - https://velog.io/@dddwsd/Greedy-Algorithm
-
-Hash - https://velog.io/@dddwsd/Hash
-
-Sort - https://velog.io/@dddwsd/Sort-algorithm
-
-# Data Structure
-
-Heap - https://velog.io/@dddwsd/Heap
-
-Stack & Queue - https://velog.io/@dddwsd/Stack-Queue
+## Leetcode
+Problem in [`leetcode`](https://leetcode.com/problemset/all/)
