@@ -74,7 +74,10 @@ def solution(A, X):
                 end = mid - 1
             else:
                 start = mid + 1
-        answer += fences_size - (end + 1)
+        #answer += fences_size - (end + 1)
+        answer += fences_size - start
+        if answer > 1000000000:
+            return -1
     return answer
 
 
