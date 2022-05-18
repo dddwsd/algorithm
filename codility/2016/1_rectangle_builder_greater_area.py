@@ -1,4 +1,4 @@
-# https://app.codility.com/programmers/trainings/2/
+# https://app.codility.com/programmers/trainings/2/rectangle_builder_greater_area/start/
 
 # 69% score - O(n^2)
 from collections import defaultdict
