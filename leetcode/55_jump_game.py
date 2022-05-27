@@ -19,7 +19,7 @@ class Solution:
             return False
         return True
 
-# 
+# 478ms
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         end = len(nums) -1

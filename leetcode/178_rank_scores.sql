@@ -1,3 +1,4 @@
+-- https://leetcode.com/problems/rank-scores/
 -- 8.0부터 rank 함수 지원
 -- 동일값에 대한 순위를 매길 수 있음.
 

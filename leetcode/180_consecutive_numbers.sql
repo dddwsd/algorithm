@@ -1,3 +1,4 @@
+-- https://leetcode.com/problems/consecutive-numbers/
 -- LEAD 다음 row - MSSQL
 SELECT DISTINCT c.num as ConsecutiveNums
 FROM (
@@ -9,7 +10,6 @@ FROM (
         Logs
 ) as c
 WHERE c.num = c.next and c.num = c.next_next
-
 
 -- LAG 이전 row - MSSQL
 SELECT DISTINCT c.num as ConsecutiveNums
