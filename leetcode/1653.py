@@ -45,6 +45,58 @@ class Solution:
             result += remove_a + cur_a
         return result
 
+"""
+Improve Runtime
+216ms / 88.33%
+Memory
+17.56MB / 92.33%
+"""
+class Solution:
+    def minimumDeletions(self, s: str) -> int:
+        result = 0
+        cur_a = 0
+        remove_a = 0
+        cur_b = 0
+        for char in s:
+            if not cur_b and char == "a":
+                continue
+            if char == "a":
+                cur_a += 1
+            if char == "b":
+                if cur_a:
+                    if remove_a + cur_a >= cur_b:
+                        remove_a = 0
+                        result += cur_b
+                        cur_b = 0
+                        cur_a = 0
+                    else:
+                        remove_a += cur_a
+                        cur_a = 0
+                cur_b += 1
+        if remove_a + cur_a >= cur_b:
+            result += cur_b
+        else:
+            result += remove_a + cur_a
+        return result
+
+
+"""
+Simple answer
+Runtime
+152ms / 97.67%
+Memory
+17.61MB / 79.00%
+"""
+class Solution:
+    def minimumDeletions(self, s):
+        ans, count = 0, 0
+        for i in s:
+            if i == 'b':
+                count += 1
+            elif count:
+                ans += 1
+                count -= 1
+        return ans
 
 solution = Solution()
 s = "aabbbb"
