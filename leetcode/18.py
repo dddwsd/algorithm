@@ -65,12 +65,64 @@ class Solution:
                         left -= 1
         return result
 
+"""
+Two pointer except first element - skip duplicate
+Runtime
+543ms / 40.89%
+Memory
+16.59MB / 61.39%
+"""
+class Solution:
+    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
+        nums.sort()
+        length = len(nums)
+        result = []
+        for a_idx in range(length-3):
+            if a_idx > 0 and nums[a_idx] == nums[a_idx-1]:
+                continue
+            a = nums[a_idx]
+            for b_idx in range(a_idx+1, length-2):
+                if b_idx > a_idx+1 and nums[b_idx] == nums[b_idx-1]:
+                    continue
+                b = nums[b_idx]
+                left = b_idx+1
+                right = length - 1
+                while left < right:
+                    c = nums[left]
+                    d = nums[right]
+                    if a+b+c+d == target:
+                        result.append([a,b,c,d])
+                        left += 1
+                        right -= 1
+                        while nums[left-1] == nums[left]:
+                            left += 1
+                            if left >= right:
+                                break
+                        while nums[right] == nums[right+1]:
+                            right -=1
+                            if left >= right:
+                                break
+                    elif a+b+c+d < target:
+                        left += 1
+                    else:
+                        right -= 1
+        return result
 
 
 solution = Solution()
 nums = [1,0,-1,0,-2,2]
 target = 0
 output = [[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
+if solution.fourSum(nums, target) == output:
+    print('Success')
+else:
+    print('Fail')
+
+
+solution = Solution()
+nums = [-2,-1,-1,1,1,2,2]
+target = 0
+output = [[-2,-1,1,2],[-1,-1,1,1]]
 if solution.fourSum(nums, target) == output:
     print('Success')
 else:
